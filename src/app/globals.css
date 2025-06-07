@@ -1,0 +1,159 @@
+/*src/app/globals.css*/
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif:ital,wght@0,400;0,600&display=swap');
+@import 'leaflet/dist/leaflet.css';
+@import '@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css';
+
+/* ./src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* copy-paste your .theme-cardboard { … } and .theme-cardboard.dark { … } here */
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --header-h: 3.5rem;       /* h-14 = 56 px  */
+  --header-gap: calc(var(--header-h) + 1px);   /* border / shadow */
+  --header-gap-lg: calc(var(--header-gap) + 0.5rem); /* = 56 + 1 + 8 */
+  --toolbar-height: 48px;   /* height of the toggle-button bar in maps */
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+html.light {
+  color-scheme: light !important;
+}
+
+/* Optional: wipe out any dark:bg-*, dark:text-* rules */
+[class*="dark"] {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.theme-cardboard {
+  font-family: 'Space Grotesk', sans-serif;
+  --color-primary-50: 236 254 255;
+  --color-primary-100: 207 250 254;
+  --color-primary-200: 165 243 252;
+  --color-primary-300: 103 232 249;
+  --color-primary-400: 34 211 238;
+  --color-primary-500: 6 182 212;
+  --color-primary-600: 8 145 178;
+  --color-primary-700: 14 116 144;
+  --color-primary-800: 21 94 117;
+  --color-primary-900: 22 78 99;
+
+  --color-secondary-50: 247 254 231;
+  --color-secondary-100: 236 252 203;
+  --color-secondary-200: 217 249 157;
+  --color-secondary-300: 190 242 100;
+  --color-secondary-400: 163 230 53;
+  --color-secondary-500: 132 204 22;
+  --color-secondary-600: 101 163 13;
+  --color-secondary-700: 77 124 15;
+  --color-secondary-800: 63 98 18;
+  --color-secondary-900: 54 83 20;
+
+  --color-text-heading: 62 51 85;
+  --color-text-base: 62 51 85;
+  --color-text-muted: 100 116 139;
+  --color-text-inverted: 229 229 229;
+  /* black */
+  --color-text-code: 0 0 0;
+
+  /* white */
+  --color-bg: 255 255 255;
+  --color-bg-inverted: 23 23 23;
+  /* primary-100 */
+  --color-bg-code: 254 243 199;
+
+  --color-link: 34 211 238;
+}
+
+.theme-cardboard.dark {
+  --color-primary-50: 236 254 255;
+  --color-primary-100: 207 250 254;
+  --color-primary-200: 165 243 252;
+  --color-primary-300: 103 232 249;
+  --color-primary-400: 34 211 238;
+  --color-primary-500: 6 182 212;
+  --color-primary-600: 8 145 178;
+  --color-primary-700: 14 116 144;
+  --color-primary-800: 21 94 117;
+  --color-primary-900: 22 78 99;
+
+  --color-secondary-50: 247 254 231;
+  --color-secondary-100: 236 252 203;
+  --color-secondary-200: 217 249 157;
+  --color-secondary-300: 190 242 100;
+  --color-secondary-400: 163 230 53;
+  --color-secondary-500: 132 204 22;
+  --color-secondary-600: 101 163 13;
+  --color-secondary-700: 77 124 15;
+  --color-secondary-800: 63 98 18;
+  --color-secondary-900: 54 83 20;
+
+  --color-text-heading: 255 255 255;
+  --color-text-base: 229 229 229;
+  --color-text-muted: 148 163 184;
+  --color-text-inverted: 15 23 42;
+  /* white */
+  --color-text-code: 255 255 255;
+
+  /* slate-900 */
+  --color-bg: 15 23 42;
+  --color-bg-inverted: 255 255 255;
+  /* primary-900 */
+  --color-bg-code: 24 24 27;
+
+  --color-link: 103 232 249;
+}
+
+@layer components {
+  .animated-underline {
+      position: relative;
+      box-decoration-break: clone;
+      text-decoration: none;
+  }
+
+  .animated-underline:hover:after {
+      transform: translateZ(0) scale(1);
+  }
+
+  .animated-underline:after {
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      content: "";
+      height: 2px;
+      position: absolute;
+      transform: translateZ(0) scaleX(0);
+      transform-origin: left center;
+      transition: all .150s ease-in-out;
+  }
+}

@@ -1,0 +1,7 @@
+# ./dotenv
+# usage: dotenv ./path/to/file  &&  the-rest-of-your-command
+f=$1 && shift
+set -a                       # export everything that gets defined
+. "$f"                       # shell-source the file
+set +a
+exec "$@"                    # run the rest
