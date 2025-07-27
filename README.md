@@ -48,3 +48,37 @@ Clone the repo and install dependencies:
 git clone https://github.com/castillofranciscoj/agroetica-fe
 cd agroetica-fe
 npm install
+
+Start the local dev server:
+
+```bash
+npm run dev
+
+Open http://localhost:3000 to view the app.
+
+---
+
+## Folder Structure
+
+📦 agroetica-fe/
+├── app/                # App directory (Next.js App Router)
+├── components/         # Reusable UI components
+├── lib/                # Utility functions, API clients
+├── public/             # Static assets (icons, screenshots)
+├── styles/             # Tailwind base styles
+├── docs/               # Screenshots, diagrams, technical notes
+└── ...
+
+
+## 👨‍💻 About the Author
+
+**Francisco Castillo**  
+Senior Software Engineer | GenAI & Platform Architecture | MBA Imperial College  
+🌍 London-based | 🇬🇧 Permanent Resident  
+🔗 [linkedin.com/in/franciscojcastillo](https://linkedin.com/in/franciscojcastillo)
+
+> _Building secure, intelligent platforms to power systems change — from AgTech to LegalTech and beyond._
+
+---
+
+
