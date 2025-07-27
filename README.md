@@ -1,5 +1,12 @@
 # 🌱 Agroetica — Frontend Platform for Regenerative Farm Compliance
 
+**Agroetica** is a full-stack agentic platform for sustainable agriculture, delivering near real-time compliance insights to regenerative farms using Sentinel-2 satellite data, GenAI, and scalable cloud infrastructure.
+
+This repo contains the **frontend web platform** built in **Next.js** — supporting insight visualisation, offline-first functionality, and a modular architecture designed for rapid iteration and AI agent integration.
+
+> 🛰️ Built for real-world diagnostics. Designed for scale. Powered by GenAI.
+
+## Screenshots
 ### Dashboard View
 ![Agroetica UI Screenshot](docs/agroetica_dashboard.png)
 
@@ -8,12 +15,6 @@
 
 ### Admin Panel
 ![Admin Panel](./agroetica_admin.png)
-
-**Agroetica** is a full-stack agentic platform for sustainable agriculture, delivering near real-time compliance insights to regenerative farms using Sentinel-2 satellite data, GenAI, and scalable cloud infrastructure.
-
-This repo contains the **frontend web platform** built in **Next.js** — supporting insight visualisation, offline-first functionality, and a modular architecture designed for rapid iteration and AI agent integration.
-
-> 🛰️ Built for real-world diagnostics. Designed for scale. Powered by GenAI.
 
 ---
 
@@ -48,11 +49,13 @@ Clone the repo and install dependencies:
 git clone https://github.com/castillofranciscoj/agroetica-fe
 cd agroetica-fe
 npm install
+```
 
 Start the local dev server:
 
 ```bash
 npm run dev
+```
 
 Open http://localhost:3000 to view the app.
 
@@ -60,6 +63,7 @@ Open http://localhost:3000 to view the app.
 
 ## Folder Structure
 
+```plaintext
 📦 agroetica-fe/
 ├── app/                # App directory (Next.js App Router)
 ├── components/         # Reusable UI components
@@ -68,6 +72,7 @@ Open http://localhost:3000 to view the app.
 ├── styles/             # Tailwind base styles
 ├── docs/               # Screenshots, diagrams, technical notes
 └── ...
+```
 
 
 ## 👨‍💻 About the Author
