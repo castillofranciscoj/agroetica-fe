@@ -1,6 +1,13 @@
 # 🌱 Agroetica — Frontend Platform for Regenerative Farm Compliance
 
+### Dashboard View
 ![Agroetica UI Screenshot](docs/agroetica_dashboard.png)
+
+### Crop Management View
+![Crop Management](./agroetica_crop_management.png)
+
+### Admin Panel
+![Admin Panel](./agroetica_admin.png)
 
 **Agroetica** is a full-stack agentic platform for sustainable agriculture, delivering near real-time compliance insights to regenerative farms using Sentinel-2 satellite data, GenAI, and scalable cloud infrastructure.
 
